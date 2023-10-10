@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:kopapirollo"
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="800">
-    <Grid>
-        
+    <Grid HorizontalAlignment="Center" Width="800" Height="234" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
     </Grid>
 </Window>
