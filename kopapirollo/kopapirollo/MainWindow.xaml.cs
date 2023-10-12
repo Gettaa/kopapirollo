@@ -24,5 +24,22 @@ namespace kopapirollo
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void starterbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 win1 = new Window1();
+            this.Close();
+            win1.Show();
+        }
     }
 }
