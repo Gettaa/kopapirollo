@@ -5,13 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kopapirollo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="800">
-    <Grid HorizontalAlignment="Center" Width="800" Height="234" VerticalAlignment="Bottom">
+        Title="MainWindow" Height="250" Width="800" MinHeight="250">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Label Content="Adja meg a nevét:" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16" Height="31" Width="137" HorizontalAlignment="Left"/>
+        <TextBox
+            Margin="10,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Cursor="Arrow" Height="23" Grid.Row="1"/>
+        <Label Content="Adja meg a játék típusát:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontSize="16"/>
+        <RadioButton Content="kő - papír - olló" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center" FontSize="16" VerticalContentAlignment="Center" Checked="RadioButton_Checked"/>
+        <RadioButton Content="kő - papír - olló - gyík - Spock" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
+        <Button Content="Játék indítása" Margin="0,0,10,0" Grid.Row="5" VerticalAlignment="Center" FontSize="16" HorizontalAlignment="Right" Width="106" Click="Button_Click"/>
     </Grid>
 </Window>
