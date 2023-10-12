@@ -20,6 +20,6 @@
         <Label Content="Adja meg a játék stílusát:&#xD;&#xA;" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="34" FontSize="16" Grid.Row="1"/>
         <RadioButton Content="kő - papír - olló&#xA;" HorizontalAlignment="Left" Margin="22,44,0,0" VerticalAlignment="Top" Height="21" FontSize="16" VerticalContentAlignment="Center" Grid.Row="1"/>
         <RadioButton Content="kő - papír - olló - Spock" HorizontalAlignment="Left" Margin="22,70,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" Grid.Row="1"/>
-        <Button Name="starterbutton" Content="Játék indítása&#xD;&#xA;" Margin="0,2,22,0" VerticalAlignment="Top" Height="27" FontSize="16" Grid.Row="2" RenderTransformOrigin="0.203,0.482" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Width="103" Click="starterbutton_Click"/>
+        <Button Name="starterbutton" Command="NavigationCommands.GoToPage" CommandParameter="Page1.xaml" Content="Játék indítása&#xD;&#xA;" Margin="0,2,22,0" FontSize="16" Grid.Row="2" RenderTransformOrigin="0.203,0.482" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Width="103" Click="starterbutton_Click" Height="27" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -37,9 +37,9 @@ namespace kopapirollo
 
         private void starterbutton_Click(object sender, RoutedEventArgs e)
         {
-            Window1 win1 = new Window1();
-            this.Close();
-            win1.Show();
+            //NavigationWindow page1 = new NavigationWindow();
+            //page1.Show();
+            //this.Close();
         }
     }
 }
