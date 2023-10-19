@@ -25,12 +25,32 @@ namespace kopapirollo
             InitializeComponent();
         }
 
+        private void checkStart() {
+            if (name.Text.Length > 0) {
+                start.IsEnabled = true;
+            } else {
+                start.IsEnabled = false;
+            }
+        }
+
+        // gamemode1
         private void RadioButton_Checked(object sender, RoutedEventArgs e) {
 
         }
 
+        // gamemode2
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e) {
+
+        }
+
+        // start
         private void Button_Click(object sender, RoutedEventArgs e) {
 
+        }
+
+        // name
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e) {
+            checkStart();
         }
     }
 }
