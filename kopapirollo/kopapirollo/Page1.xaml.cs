@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,48 +12,41 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Xml.Linq;
 
 namespace kopapirollo
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for Page2.xaml
     /// </summary>
-    private void checkStart()
+    public partial class Page1 : Page
     {
-        if (name.Text.Length > 0)
+        public Page1()
         {
-            start.IsEnabled = true;
+            InitializeComponent();
         }
-        else
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            start.IsEnabled = false;
+
         }
-    }
 
-    // gamemode1
-    private void RadioButton_Checked(object sender, RoutedEventArgs e)
-    {
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (gamemode1.IsChecked == true || gamemode2.IsChecked == true) 
+            {
+                Page2 page2 = new Page2();
+                NavigationService.Navigate(page2);
+            }
+        }
 
-    }
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
 
-    // gamemode2
-    private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
-    {
+        }
 
-    }
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
 
-    // start
-    private void Button_Click(object sender, RoutedEventArgs e)
-    {
-        //NavigationWindow window = new NavigationWindow();
-        //window.Source = new Uri("Page1.xaml", UriKind.Relative);
-        //window.Show();
-    }
-
-    // name
-    private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-    {
-        checkStart();
+        }
     }
 }

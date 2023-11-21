@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:kopapirollo"
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="800" MinHeight="250" MinWidth="265">
-    <Frame>
+    <Frame x:Name="vaszon">
         
     </Frame>
 </Window>

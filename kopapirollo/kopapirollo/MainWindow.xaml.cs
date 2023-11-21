@@ -23,6 +23,8 @@ namespace kopapirollo
         public MainWindow()
         {
             InitializeComponent();
+            Page1 page1 = new Page1();
+            vaszon.Navigate(page1);
         }
     }
 }
