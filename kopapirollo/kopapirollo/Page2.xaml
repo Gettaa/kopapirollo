@@ -1,0 +1,30 @@
+﻿<Page x:Class="kopapirollo.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kopapirollo"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page2">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="x eddigi eredményei:&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Height="27"/>
+        <Label Content="Válasszon egy alakzatot, majd nyomjon OK-t:&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="2" VerticalAlignment="Top" Height="34"/>
+        <ListBox Grid.Row="3" Margin="10, 10"/>
+        <Button Grid.Column="1" Content="OK x/5&#xD;&#xA;" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="30" Width="84" FontSize="16"/>
+        <ListBox Grid.Row="1" Margin="10, 10" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Width="800" Grid.ColumnSpan="2"/>
+        <ListBox Grid.Row="4" Margin="10, 10" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2"/>
+    </Grid>
+</Page>
