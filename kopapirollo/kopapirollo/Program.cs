@@ -181,10 +181,4 @@ namespace kopapirollo {
 			File.WriteAllLines("jatekosok.txt", sorok);
 		}
 	}
-	internal class Program {
-		static void Main(string[] args) {
-			new Jatek();
-		}
-	}
-
 }
