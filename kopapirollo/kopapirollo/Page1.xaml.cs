@@ -27,7 +27,8 @@ namespace kopapirollo
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            if (nev.Text.Length > 0) start.IsEnabled = true;
+            else start.IsEnabled = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

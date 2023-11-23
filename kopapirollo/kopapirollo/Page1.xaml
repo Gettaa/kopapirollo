@@ -21,7 +21,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label Content="Adja meg a nevét:" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16" Height="31" Width="137" HorizontalAlignment="Left"/>
-        <TextBox x:Name="name"
+        <TextBox x:Name="nev"
             Margin="10,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Cursor="Arrow" Height="23" Grid.Row="1" TextChanged="TextBox_TextChanged"/>
         <Label Content="Adja meg a játék típusát:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontSize="16"/>
         <RadioButton x:Name="gamemode1" Content="kő - papír - olló" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center" FontSize="16" VerticalContentAlignment="Center" Checked="RadioButton_Checked" IsChecked="True"/>
