@@ -24,7 +24,7 @@
         <Label Content="Válasszon egy alakzatot, majd nyomjon OK-t:&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="2" VerticalAlignment="Top" Height="34"/>
         <ListBox x:Name="alakzatValaszto" Grid.Row="3" Margin="10, 10"/>
         <Button x:Name="Menetgomb" Grid.Column="1" Content="OK 5/5&#xA;" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="30" Width="84" FontSize="16" Click="Button_Click"/>
-        <ListBox Grid.Row="1" Margin="10,10,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Width="780" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="eddigiEredmeny" Grid.Row="1" Margin="10,10,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Width="780" Grid.ColumnSpan="2"/>
         <ListBox x:Name="menetEredmeny" Grid.Row="4" Margin="10, 10" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" SelectionChanged="ListBox_SelectionChanged_2"/>
     </Grid>
 </Page>
