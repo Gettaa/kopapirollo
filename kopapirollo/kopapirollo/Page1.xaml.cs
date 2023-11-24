@@ -30,12 +30,14 @@ namespace kopapirollo
 			
 		}
 		public static string enteredName;
+		public static bool advancedMode;
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			if (gamemode1.IsChecked == true || gamemode2.IsChecked == true) 
 			{
 				enteredName = nev.Text;
+				advancedMode = gamemode1.IsChecked == true ? false : true;
 				Page2 page2 = new Page2();
 				NavigationService.Navigate(page2);
 			}
