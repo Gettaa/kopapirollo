@@ -23,6 +23,7 @@ namespace kopapirollo
         public Page3()
         {
             InitializeComponent();
+            nevVegleges.Content = $"{Page1.enteredName} eddigi eredményei:";
         }
     }
 }
