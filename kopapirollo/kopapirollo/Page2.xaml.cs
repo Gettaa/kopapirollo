@@ -22,14 +22,19 @@ namespace kopapirollo
 	/// </summary>
 	public partial class Page2 : Page
 	{
-		int menetek = 4;
+		Jatek jatek = new Jatek();
+
 		public Page2()
 		{
 			InitializeComponent();
 			List<string> sorok = File.ReadAllLines("jatekosok.txt").ToList();
 			Console.WriteLine(sorok.Count);
-            nevEredmeny.Content = $"{Page1.enteredName} eddigi eredményei:";
-        }
+			nevEredmeny.Content = $"{Page1.enteredName} eddigi eredményei:";
+		}
+
+		public static void eddigiEredmenyBeiras(int[] sor) {
+			/* eddigi eredmeny beirasa felso tablaba */
+		}
 
 		private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
@@ -46,22 +51,24 @@ namespace kopapirollo
 
 		}
 
+		public static int menetek = 5;
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			if (menetek > 0) {
+			jatek.ujKor(menetek);
+			if (menetek > 1) {
 				menetek--;
-                Menetgomb.Content = $"OK {menetek + 1}/5";
-            }
+				Menetgomb.Content = $"OK {menetek + 1}/5";
+			}
 			else {
-				if (menetek == 0) {
+				if (menetek == 1) {
 					Menetgomb.Content = "Vége!";
-                    menetek--;
-                }
+					menetek--;
+				}
 				else {
 					Page3 page3 = new Page3();
 					NavigationService.Navigate(page3);
 				}
 			}
-        }
+		}
 	}
 }

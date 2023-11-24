@@ -87,16 +87,31 @@ namespace kopapirollo {
 		public Jatek() {
 			JatekosokBetoltese();
 			JatekosokBelepese();
-			JatekosEredmeny();
-			Tipus = Page1.advancedMode ? 4 : 2;
+            Page2.eddigiEredmenyBeiras(new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek });
+            Tipus = Page1.advancedMode ? 4 : 2;
+			/*
 			for (int kor = 1; kor <= 5; kor++) {
-				System.Console.WriteLine($"{kor}/5 kör");
+				
 				AlakzatValasztas();
 				KorEredmeny();
 			}
 			JatekEredmeny();
-			//JatekosEredmeny();
+			Page2.eddigiEredmenyBeiras(new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek });
 			JatekosokMentese();
+			*/
+		}
+
+		public void ujKor(int menetek) {
+			if (menetek > 1) {
+                AlakzatValasztas();
+                KorEredmeny();
+            }
+			if (menetek == 1) {
+				JatekEredmeny();
+				Page2.eddigiEredmenyBeiras(new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek });
+				JatekosokMentese();
+			}
+			else throw new Exception("Körszám out of range");
 		}
 
 		private void JatekosokBetoltese() {
@@ -155,14 +170,6 @@ namespace kopapirollo {
 			if (Jatekos.NyertKor > Gep.NyertKor) Jatekos.NyertJatek++;
 			else if (Jatekos.NyertKor < Gep.NyertKor) Jatekos.VesztettJatek++;
 			else Jatekos.DontetlenJatek++;
-		}
-
-		private void JatekosEredmeny() {
-			System.Console.WriteLine();
-			System.Console.WriteLine($"{Jatekos.Nev} eddigi eredményei:");
-			System.Console.WriteLine($"\tNyert játékok száma: {Jatekos.NyertJatek}");
-			System.Console.WriteLine($"\tVesztett játékok száma: {Jatekos.VesztettJatek}");
-			System.Console.WriteLine($"\tDöntetlen játékok száma: {Jatekos.DontetlenJatek}");
 		}
 
 		private void JatekosokMentese() {
