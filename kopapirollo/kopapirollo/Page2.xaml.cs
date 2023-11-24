@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace kopapirollo
 {
@@ -21,12 +22,13 @@ namespace kopapirollo
 	/// </summary>
 	public partial class Page2 : Page
 	{
+		int menetek = 5;
 		public Page2()
 		{
 			InitializeComponent();
 			List<string> sorok = File.ReadAllLines("jatekosok.txt").ToList();
 			Console.WriteLine(sorok.Count);
-		}
+        }
 
 		private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
@@ -45,7 +47,14 @@ namespace kopapirollo
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-
-		}
+			Menetgomb.Content = $"OK {menetek}/5";
+            if (menetek > 0) {
+				menetek--; ;
+			} 
+			else {
+				Page3 page3 = new Page3();
+				NavigationService.Navigate(page3);
+			}
+        }
 	}
 }
