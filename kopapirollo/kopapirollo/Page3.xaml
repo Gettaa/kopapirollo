@@ -21,6 +21,6 @@
         <Label Content="A játék köreinek eredményei:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <ListBox Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10"/>
         <ListBox Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10"/>
-        <Label Content="x eddigi eredményei:" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.494,-0.085"/>
+        <Label x:Name="nevVegleges" Content="x eddigi eredményei:" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.494,-0.085"/>
     </Grid>
 </Page>
