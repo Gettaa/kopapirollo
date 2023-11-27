@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <Label Content="A játék köreinek eredményei:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" FontSize="16"/>
         <ListBox x:Name="menetEredmenyeVeg" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,23,10,23" FontSize="16"/>
-        <ListBox Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,10" FontSize="16"/>
+        <ListBox x:Name="osszEddigiEredmeny" Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,10" FontSize="16"/>
         <Label x:Name="nevVegleges" Content="x eddigi eredményei:" HorizontalAlignment="Left" Margin="10,13,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.494,-0.085" FontSize="16"/>
     </Grid>
 </Page>
