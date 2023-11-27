@@ -78,22 +78,27 @@ namespace kopapirollo
 		public static int valasztottAlakzat;
 		private void kobutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 0;
+			valasztott.Content = "Kő";
 		}
 
 		private void papirbutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 1;
+            valasztott.Content = "Papír";
         }
 
 		private void ollobutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 2;
+            valasztott.Content = "Olló";
         }
 
 		private void gyikbutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 3;
+            valasztott.Content = "Gyík";
         }
 
 		private void spockbutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 4;
+            valasztott.Content = "Spock";
         }
 
 		private void eddigiEredmeny_SelectionChanged(object sender, SelectionChangedEventArgs e) {
