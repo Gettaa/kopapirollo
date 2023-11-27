@@ -34,7 +34,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="kobutton" Grid.Column="0" RenderTransformOrigin="0.43,-0.175" Click="kobutton_Click" Margin="15,10,15,10">
+            <Button x:Name="kobutton" Grid.Column="0" RenderTransformOrigin="0.43,-0.175" Click="kobutton_Click" Margin="10,10,10,10">
                 <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\rock.jpg"/>
             </Button>
             <Button x:Name="papirbutton" Grid.Column="1" VerticalAlignment="Center" Height="104" RenderTransformOrigin="-0.123,0.487" Click="papirbutton_Click" Margin="10,0,10,0">
@@ -43,8 +43,12 @@
             <Button x:Name="ollobutton" Grid.Column="2" VerticalAlignment="Center" Height="104" Margin="10,0,10,0" Click="ollobutton_Click">
                 <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\scissors.jpg"/>
             </Button>
-            <Button x:Name="gyikbutton" Grid.Column="3" Content="Gyík" RenderTransformOrigin="0.336,0.035" Height="30" Width="45" Visibility="Hidden" Click="gyikbutton_Click"/>
-            <Button x:Name="spockbutton" Grid.Column="4" Content="Spock" Height="36" Width="50" Visibility="Hidden" Click="spockbutton_Click"/>
+            <Button x:Name="gyikbutton" Visibility="Hidden" Grid.Column="3" RenderTransformOrigin="0.336,0.035" Click="gyikbutton_Click" Margin="10,10,10,11">
+                <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\lizard.jpg"/>
+            </Button>
+            <Button x:Name="spockbutton" Visibility="Hidden" Grid.Column="4" Click="spockbutton_Click" Margin="10,10,10,10">
+                <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\spock.jpg" Width="130" Height="134"/>
+            </Button>
             <Button x:Name="Menetgomb" Grid.Column="5" Content="OK 5/5&#xA;" Height="30" Width="84" FontSize="16" Click="Button_Click"/>
         </Grid>
     </Grid>
