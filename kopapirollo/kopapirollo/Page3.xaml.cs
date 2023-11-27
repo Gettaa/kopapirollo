@@ -23,7 +23,12 @@ namespace kopapirollo
         public Page3()
         {
             InitializeComponent();
-            nevVegleges.Content = $"{Page1.enteredName} eddigi eredményei:";
+            //Menet
+            //menetEredmenyeVeg.
+
+            //Összes
+            //nevVegleges.Content = $"{Page1.enteredName} eddigi eredményei:"
+
         }
     }
 }
