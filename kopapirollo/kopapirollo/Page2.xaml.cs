@@ -23,52 +23,85 @@ namespace kopapirollo
 	public partial class Page2 : Page
 	{
 		Jatek jatek = new Jatek();
-
+		public static int[] eddigiEredmenyLista;
 		public Page2()
 		{
 			InitializeComponent();
 			List<string> sorok = File.ReadAllLines("jatekosok.txt").ToList();
 			Console.WriteLine(sorok.Count);
 			nevEredmeny.Content = $"{Page1.enteredName} eddigi eredményei:";
+			if (Page1.advancedMode) {
+				gyikbutton.Visibility = Visibility.Visible;
+				spockbutton.Visibility = Visibility.Visible;
+			}
+			eddigiEredmeny.Items.Add($"Nyert játékok száma: {eddigiEredmenyLista[0]}");
+			eddigiEredmeny.Items.Add($"Vesztett játékok száma: {eddigiEredmenyLista[1]}");
+			eddigiEredmeny.Items.Add($"Döntetlen játékok száma: {eddigiEredmenyLista[2]}");
 		}
-
-		public static void eddigiEredmenyBeiras(int[] sor) {
-			/* eddigi eredmeny beirasa felso tablaba */
-		}
-
-		private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-
-		}
-
-		private void ListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-		{
-
-		}
-
-		private void ListBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
-		{
-
-		}
-
+		
 		public static int menetek = 5;
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			jatek.ujKor(menetek);
+			string korSzoveg = "";
+			switch (jatek.KorGyoztes) {
+				case 0:
+					korSzoveg = "Döntetlen";
+					break;
+				case 1:
+					korSzoveg = "Játékos nyert";
+					break;
+				case 2:
+					korSzoveg = "Gép nyert";
+					break;
+				default:
+					break;
+			}
 			if (menetek > 1) {
 				menetek--;
-				Menetgomb.Content = $"OK {menetek + 1}/5";
+				Menetgomb.Content = $"OK {menetek}/5";
+				menetEredmeny.Items.Add(korSzoveg);
 			}
+			else if (menetek == 1) {
+				Menetgomb.Content = "Vége!";
+				menetek--;
+				menetEredmeny.Items.Add(korSzoveg);
+			}
+
 			else {
-				if (menetek == 1) {
-					Menetgomb.Content = "Vége!";
-					menetek--;
-				}
-				else {
-					Page3 page3 = new Page3();
-					NavigationService.Navigate(page3);
-				}
+				Page3 page3 = new Page3();
+				NavigationService.Navigate(page3);
 			}
+
+		}
+
+		public static int valasztottAlakzat;
+		private void kobutton_Click(object sender, RoutedEventArgs e) {
+			valasztottAlakzat = 0;
+		}
+
+		private void papirbutton_Click(object sender, RoutedEventArgs e) {
+			valasztottAlakzat = 1;
+        }
+
+		private void ollobutton_Click(object sender, RoutedEventArgs e) {
+			valasztottAlakzat = 2;
+        }
+
+		private void gyikbutton_Click(object sender, RoutedEventArgs e) {
+			valasztottAlakzat = 3;
+        }
+
+		private void spockbutton_Click(object sender, RoutedEventArgs e) {
+			valasztottAlakzat = 4;
+        }
+
+		private void eddigiEredmeny_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+
+		}
+
+		private void ListBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e) {
+
 		}
 	}
 }

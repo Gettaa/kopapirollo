@@ -79,7 +79,7 @@ namespace kopapirollo {
 	}
 	class Jatek {
 		private int Tipus { get; set; }
-		private int KorGyoztes { get; set; }
+		public int KorGyoztes { get; private set; }
 		private Jatekos Jatekos { get; set; }
 		private Jatekos Gep { get; set; }
 		private List<Jatekos> Jatekosok = new List<Jatekos>();
@@ -87,31 +87,19 @@ namespace kopapirollo {
 		public Jatek() {
 			JatekosokBetoltese();
 			JatekosokBelepese();
-            Page2.eddigiEredmenyBeiras(new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek });
-            Tipus = Page1.advancedMode ? 4 : 2;
-			/*
-			for (int kor = 1; kor <= 5; kor++) {
-				
-				AlakzatValasztas();
-				KorEredmeny();
-			}
-			JatekEredmeny();
-			Page2.eddigiEredmenyBeiras(new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek });
-			JatekosokMentese();
-			*/
+			Page2.eddigiEredmenyLista = new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek };
+			Tipus = Page1.advancedMode ? 4 : 2;
 		}
 
 		public void ujKor(int menetek) {
 			if (menetek > 1) {
-                AlakzatValasztas();
-                KorEredmeny();
-            }
+				AlakzatValasztas();
+				KorEredmeny();
+			}
 			if (menetek == 1) {
 				JatekEredmeny();
-				Page2.eddigiEredmenyBeiras(new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek });
-				JatekosokMentese();
+                JatekosokMentese();
 			}
-			else throw new Exception("Körszám out of range");
 		}
 
 		private void JatekosokBetoltese() {
@@ -131,7 +119,7 @@ namespace kopapirollo {
 		}
 
 		private void AlakzatValasztas() {
-			Jatekos.Valaszt(Tipus /*, kivalasztott alakzat listabol*/);
+			Jatekos.Valaszt(Tipus, Page2.valasztottAlakzat);
 			Gep.Valaszt(Tipus);
 		}
 
@@ -150,7 +138,6 @@ namespace kopapirollo {
 
 		private void KorEredmeny() {
 			KorGyoztes = Ertekeles(Jatekos.Alakzat.Ertek, Gep.Alakzat.Ertek);
-			/*eredmeny elkuldese*/
 			if (KorGyoztes == 1) {
 				Jatekos.NyertKor++;
 				Gep.VesztettKor++;
