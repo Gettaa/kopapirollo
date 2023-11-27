@@ -35,19 +35,19 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="kobutton" Grid.Column="0" RenderTransformOrigin="0.43,-0.175" Click="kobutton_Click" Margin="10,10,10,10">
-                <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\rock.jpg"/>
+                <Image Source="/rock.jpg"/>
             </Button>
             <Button x:Name="papirbutton" Grid.Column="1" VerticalAlignment="Center" Height="104" RenderTransformOrigin="-0.123,0.487" Click="papirbutton_Click" Margin="10,0,10,0">
-                <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\paper.jpg" Width="79"></Image>
+                <Image Source="/paper.jpg" Width="79"></Image>
             </Button>
             <Button x:Name="ollobutton" Grid.Column="2" VerticalAlignment="Center" Height="104" Margin="10,0,10,0" Click="ollobutton_Click">
-                <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\scissors.jpg"/>
+                <Image Source="/scissors.jpg"/>
             </Button>
             <Button x:Name="gyikbutton" Visibility="Hidden" Grid.Column="3" RenderTransformOrigin="0.336,0.035" Click="gyikbutton_Click" Margin="10,10,10,11">
-                <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\lizard.jpg"/>
+                <Image Source="/lizard.jpg"/>
             </Button>
             <Button x:Name="spockbutton" Visibility="Hidden" Grid.Column="4" Click="spockbutton_Click" Margin="10,10,10,10">
-                <Image Source="C:\Users\toth.mate_csany-zeg\Documents\2023c\kopapirollo\kopapirollo\kopapirollo\bin\Debug\images\spock.jpg" Width="130" Height="134"/>
+                <Image Source="/spock.jpg" Width="130" Height="134"/>
             </Button>
             <Button x:Name="Menetgomb" Grid.Column="5" Content="OK 5/5&#xA;" Height="30" Width="84" FontSize="16" Click="Button_Click"/>
             <Label Grid.Column="5" Content="Kiválasztva:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-7,0,0"/>
