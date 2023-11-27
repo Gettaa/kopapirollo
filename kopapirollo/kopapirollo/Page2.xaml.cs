@@ -43,30 +43,17 @@ namespace kopapirollo
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			jatek.ujKor(menetek);
-			string korSzoveg = "";
-			switch (jatek.KorGyoztes) {
-				case 0:
-					korSzoveg = "Döntetlen";
-					break;
-				case 1:
-					korSzoveg = "Játékos nyert";
-					break;
-				case 2:
-					korSzoveg = "Gép nyert";
-					break;
-				default:
-					break;
-			}
+			string[] korSzoveg = { "Döntetlen", "Játékos nyert", "Gép nyert" };
 			if (menetek > 1) {
 				menetek--;
 				Menetgomb.Content = $"OK {menetek}/5";
-				menetEredmeny.Items.Add(korSzoveg);
+				menetEredmeny.Items.Add(korSzoveg[jatek.KorGyoztes] + $" ({jatek.Uzenet()})");
 			}
 			else if (menetek == 1) {
 				Menetgomb.Content = "Vége!";
 				menetek--;
-				menetEredmeny.Items.Add(korSzoveg);
-			}
+                menetEredmeny.Items.Add(korSzoveg[jatek.KorGyoztes] + $" ({jatek.Uzenet()})");
+            }
 
 			else {
 				Page3 page3 = new Page3();
@@ -74,6 +61,7 @@ namespace kopapirollo
 			}
 
 		}
+
 
 		public static int valasztottAlakzat;
 		private void kobutton_Click(object sender, RoutedEventArgs e) {

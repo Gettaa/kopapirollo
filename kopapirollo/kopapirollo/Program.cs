@@ -80,8 +80,8 @@ namespace kopapirollo {
 	class Jatek {
 		private int Tipus { get; set; }
 		public int KorGyoztes { get; private set; }
-		private Jatekos Jatekos { get; set; }
-		private Jatekos Gep { get; set; }
+		public Jatekos Jatekos { get; private set; }
+		public Jatekos Gep { get; private set; }
 		private List<Jatekos> Jatekosok = new List<Jatekos>();
 
 		public Jatek() {
@@ -134,6 +134,17 @@ namespace kopapirollo {
 				/*S*/{1, 2, 1, 2, 0},
 			};
 			return tablazat[ertek1, ertek2];
+		}
+
+		public string Uzenet() {
+			string[,] tablazat = {
+				{ "Kövek elkoptatják egymást", "Papír becsomagolja a követ", "Kő elcsorbítja az ollót", "Kő agyonüti a gyíkot", "Spock megolvasztja a követ" },
+				{ "Papír becsomagolja a követ", "Papírok összeorigamizzák egymást", "Olló elvágja a papírt", "Gyík megeszi a papírt", "Papír megcáfolja a Spockot" },
+				{ "Kő elcsorbítja az ollót", "Olló elvágja a papírt", "Ollók megollózzák egymást", "Olló lefejezi a gyíkot", "Spock eltöri az ollót" },
+				{ "Kő agyonüti a gyíkot", "Gyík megeszi a papírt", "Olló lefejezi a gyíkot", "Gyíkok megsülnek a napon", "Gyík megmarja a Spockot" },
+				{ "Spock megolvasztja a követ", "Papír megcáfolja a Spockot", "Spock eltöri az ollót", "Gyík megmarja a Spockot", "Spockok egszisztenciális krízisbe kerülnek és megölik magukat"}
+        };
+			return tablazat[Jatekos.Alakzat.Ertek, Gep.Alakzat.Ertek];
 		}
 
 		private void KorEredmeny() {

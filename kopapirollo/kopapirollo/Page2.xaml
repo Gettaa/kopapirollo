@@ -38,7 +38,7 @@
                 <Image Source="/rock.jpg"/>
             </Button>
             <Button x:Name="papirbutton" Grid.Column="1" VerticalAlignment="Center" Height="104" RenderTransformOrigin="-0.123,0.487" Click="papirbutton_Click" Margin="10,0,10,0">
-                <Image Source="/paper.jpg" Width="79"></Image>
+                <Image Source="/paper.jpg"></Image>
             </Button>
             <Button x:Name="ollobutton" Grid.Column="2" VerticalAlignment="Center" Height="104" Margin="10,0,10,0" Click="ollobutton_Click">
                 <Image Source="/scissors.jpg"/>
