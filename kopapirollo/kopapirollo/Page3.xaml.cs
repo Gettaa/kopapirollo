@@ -24,11 +24,18 @@ namespace kopapirollo
         {
             InitializeComponent();
             //Menet
-            //menetEredmenyeVeg.
+            menetEredmenyeVeg.Items.Add($"{Page1.enteredName} győztes körei: {""}");
+            menetEredmenyeVeg.Items.Add($"Gép győztes körei: {""}");
+            menetEredmenyeVeg.Items.Add($"Döntetlen körök száma: {""}");
+            menetEredmenyeVeg.Items.Add($"A játék abszolút győztese: //kérdőjeles string kérdés kéne//");
+
+            //Név
+            nevVegleges.Content = $"{Page1.enteredName} eddigi eredményei:";
 
             //Összes
-            //nevVegleges.Content = $"{Page1.enteredName} eddigi eredményei:"
-
+            osszEddigiEredmeny.Items.Add($"Nyert játékok száma: {""}");
+            osszEddigiEredmeny.Items.Add($"Vesztett játékok száma: {""}");
+            osszEddigiEredmeny.Items.Add($"Döntetlen játékok száma: {""}");
         }
     }
 }
