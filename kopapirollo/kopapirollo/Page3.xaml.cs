@@ -40,15 +40,6 @@ namespace kopapirollo
 			osszEddigiEredmeny.Items.Add($"Vesztett játékok száma: {eddigiStat[1]}");
 			osszEddigiEredmeny.Items.Add($"Döntetlen játékok száma: {eddigiStat[2]}");
 		}
-
-<<<<<<< Updated upstream
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			Page2 page2 = new Page2();
-			NavigationService.Navigate(page2);
-		}
-	}
-=======
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Page2 page2 = new Page2();
@@ -56,5 +47,4 @@ namespace kopapirollo
             Page2.menetek = 5;
         }
     }
->>>>>>> Stashed changes
 }
