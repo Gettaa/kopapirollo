@@ -67,26 +67,31 @@ namespace kopapirollo
 		private void kobutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 0;
 			valasztott.Content = "Kő";
+			Menetgomb.IsEnabled = true;
 		}
 
 		private void papirbutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 1;
             valasztott.Content = "Papír";
+            Menetgomb.IsEnabled = true;
         }
 
 		private void ollobutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 2;
             valasztott.Content = "Olló";
+            Menetgomb.IsEnabled = true;
         }
 
 		private void gyikbutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 3;
             valasztott.Content = "Gyík";
+            Menetgomb.IsEnabled = true;
         }
 
 		private void spockbutton_Click(object sender, RoutedEventArgs e) {
 			valasztottAlakzat = 4;
             valasztott.Content = "Spock";
+            Menetgomb.IsEnabled = true;
         }
 
 		private void eddigiEredmeny_SelectionChanged(object sender, SelectionChangedEventArgs e) {
