@@ -37,5 +37,11 @@ namespace kopapirollo
             osszEddigiEredmeny.Items.Add($"Vesztett játékok száma: {""}");
             osszEddigiEredmeny.Items.Add($"Döntetlen játékok száma: {""}");
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Page2 page2 = new Page2();
+            NavigationService.Navigate(page2);
+        }
     }
 }

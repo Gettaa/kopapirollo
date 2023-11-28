@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kopapirollo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="800" MinHeight="350" MinWidth="600">
+        Title="Tájtöl" Height="350" Width="800" MinHeight="350" MinWidth="600">
     <Frame x:Name="vaszon" NavigationUIVisibility="Hidden">
         
     </Frame>
