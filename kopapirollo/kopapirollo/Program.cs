@@ -92,13 +92,18 @@ namespace kopapirollo {
 		}
 
 		public void ujKor(int menetek) {
-			if (menetek > 1) {
+			if (menetek > 0) {
 				AlakzatValasztas();
 				KorEredmeny();
 			}
-			if (menetek == 1) {
+			else {
 				JatekEredmeny();
                 JatekosokMentese();
+				int nyerteskod;
+				if (Jatekos.NyertKor == Gep.NyertKor) nyerteskod = 0;
+				else nyerteskod = (Jatekos.NyertKor > Gep.NyertKor) ? 1 : 2;
+				Page3.menetStat = new int[] { Jatekos.NyertKor, Gep.NyertKor, Jatekos.DontetlenKor, nyerteskod };
+				Page3.eddigiStat = new int[] { Jatekos.NyertJatek, Jatekos.VesztettJatek, Jatekos.DontetlenJatek };
 			}
 		}
 
