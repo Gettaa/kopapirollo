@@ -13,15 +13,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.2*"/>
             <RowDefinition Height="0.8*"/>
             <RowDefinition Height="0.3*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
-        <Label Content="A játék köreinek eredményei:" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="A játék köreinek eredményei:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16"/>
         <ListBox x:Name="menetEredmenyeVeg" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,10" FontSize="18" Grid.Row="1"/>
-        <ListBox x:Name="osszEddigiEredmeny" Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,5,10,10" FontSize="16"/>
-        <Grid Grid.RowSpan="2" Grid.Row="2" Margin="0,0,0,118">
+        <Grid Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -29,8 +28,9 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="nevVegleges" Content="x eddigi eredményei:" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,-0.085" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="restartButton" Grid.Column="1" Content="Restart" Height="51" Click="Button_Click" FontSize="18" Margin="161,10,161,10"/>
+            <Label x:Name="nevVegleges" Content="x eddigi eredményei:" Margin="10,19,214,19" RenderTransformOrigin="0.494,-0.085" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="restartButton" Grid.Column="1" Content="Restart" Click="Button_Click" FontSize="18" Margin="161,16,161,15" Height="44" Width="78" Padding="1,1,1,1"/>
         </Grid>
+        <ListBox x:Name="osszEddigiEredmeny" Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,5,10,10" FontSize="16"/>
     </Grid>
 </Page>
