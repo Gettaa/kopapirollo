@@ -28,7 +28,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="nevVegleges" Content="x eddigi eredményei:" Margin="0,10,0,0" RenderTransformOrigin="0.494,-0.085" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Center" Width="176" VerticalAlignment="Top"/>
+            <Label x:Name="nevVegleges" Content="x eddigi eredményei:" RenderTransformOrigin="0.494,-0.085" FontSize="16" VerticalContentAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0"/>
             <Button x:Name="restartButton" Grid.Column="1" Content="Restart" Click="Button_Click" FontSize="18" Height="44" Width="78" Padding="1,1,1,1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,6,0,0"/>
         </Grid>
         <ListBox x:Name="osszEddigiEredmeny" Grid.Row="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,5,10,10" FontSize="18" VerticalAlignment="Bottom"/>
